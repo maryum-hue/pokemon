@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokemon Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+</head>
+<style>
+
+
+  .poke-logo {
+    box-shadow: 2px 2px 10px black;
+  }
+
+  .nave {
+    border-bottom: 1px solid black;
+  }
+
+  .nav-out {
+    display: none;
+    flex-direction: row;
+
+  }
+
+  li {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+
+  }
+
+  @media only screen and (max-width:936px) {
+    .nav-out {
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      display: flex;
+
+    }
+
+    li {
+      list-style: none;
+      display: block;
+      flex-direction: row;
+
+    }
+  }
+
+  @media only screen and (max-width:1000px) {
+    .display-none-img {
+      display: none;
+    }
+
+  }
+
+  /* ---------------------ANOTHER NAV-BAR------------------------- */
+  /* --------------------------------COLOURED NAVBAR--------------------------------- */
+  .nav-link i {
+    font-size: 24px;
+    margin-bottom: 0px;
+  }
+
+  * {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+
+  }
+body{
+  background-image: url(body_bg.png);
+}
+
+
+  .mine {
+    width: 120px;
+    height: 110px;
+    text-align: center;
+    padding: 18px 0;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    border-bottom: 7px solid transparent;
+  }
+
+  .home {
+    background-color: gray; 
+  }
+
+  .orange {
+    border-bottom: 7px solid orangered;
+    text-align: center;
+  }
+
+  .orange:hover {
+    background-color: orangered;
+  }
+
+  .light-orange {
+    border-bottom: 7px solid orange;
+    text-align: center;
+  }
+
+  .light-orange:hover {
+    background-color: orange;
+  }
+
+  .yellow {
+
+    border-bottom: 7px solid rgb(255, 187, 0);
+
+    text-align: center;
+  }
+
+  .yellow:hover {
+    background-color: rgb(255, 187, 0);
+  }
+
+  .green {
+    border-bottom: 7px solid green;
+    text-align: center;
+  }
+
+  .green:hover {
+    background-color: green;
+  }
+
+  .blue {
+
+    border-bottom: 7px solid rgb(7, 165, 201);
+    text-align: center;
+  }
+
+  .blue:hover {
+    background-color: rgb(7, 165, 201);
+
+  }
+
+  .dark-blue {
+    border-bottom: 7px solid blue;
+    text-align: center;
+  }
+
+  .dark-blue:hover {
+    background-color: blue;
+  }
+  /* --------------------------MAIN IMG BOXES ----------------------- */
+  * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .big-img img {
+            width: 100%;
+            height: auto;
+            border-top-left-radius: 6px;
+            border-top-right-radius: 6px;
+        }
+
+        .small-img img {
+            width: 100%;
+            height: auto;
+            border-top-left-radius: 6px;
+            border-top-right-radius: 6px;
+        }
+
+        .medium-img img {
+            width: auto;
+            height: 150px;
+            border-top-left-radius: 6px;
+            border-top-right-radius: 6px;
+        }
+
+
+        .medium-img h5 {
+            padding: 30px 16px 30px 18px;
+            /* Space around the text */
+            display: inline-block;
+            /* Ensure the background only wraps around the text */
+            border-bottom-left-radius: 6px;
+            border-bottom-right-radius: 6px;
+            color: rgb(255, 255, 255);
+        }
+
+        .width-controller{
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            background: #ffffff;
+        }
+
+
+        .big-img h3 {
+            background-color: #a4a4a4;
+            color: rgb(0, 0, 0);
+            padding: 10px;
+            border-bottom-left-radius: 6px;
+            border-bottom-right-radius: 6px;
+        }
+
+        .small-img h5 {
+            padding: 30px 16px 30px 18px;
+            /* Space around the text */
+            display: inline-block;
+            /* Ensure the background only wraps around the text */
+            border-bottom-left-radius: 6px;
+            border-bottom-right-radius: 6px;
+            color: rgb(255, 255, 255);
+        }
+
+        .big-column {
+            margin-bottom: 20px;
+        }
+        /* ------------------------BOUNCE ANIMATION--------------------- */
+        .card {
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.05);
+        }
+
+        .card:active {
+            transform: translateY(0) scale(1);
+            transition: transform 0.1s ease-in-out;
+        }
+        .pinko {
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .pinko:hover {
+            transform: translateY(-10px) scale(1.05);
+        }
+
+        .pinko:active {
+            transform: translateY(0) scale(1);
+            transition: transform 0.1s ease-in-out;
+        } 
+         *{
+    text-align: center !important;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    justify-content: center;
+
+  }
+</style>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light nave">
+    <div class="container-fluid ">
+      <span class="nav-out">
+        <li><a class="nav-link" href="#"><img src="logo-pokemon-1.png" alt="Pokemon Logo 1"></a></li>
+        <li><a class="nav-link" href="#"><img src="logo-pokemoncenter-2.png" alt="Pokemon Center Logo"></a></li>
+        <li><a class="nav-link" href="#"><img src="corporate-en.png" alt="Corporate Logo"></a></li>
+      </span>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link active poke-logo" aria-current="page" href="#"><img src="logo-pokemon-1.png" alt=""></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><img src="logo-pokemoncenter-2.png" alt=""></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><img src="corporate-en.png" alt=""></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link display-none-img" href="#"><img src="logo3.png" alt=""></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link display-none-img" href="#"><img src="logo4.jpg" alt=""></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link display-none-img" href="#"><img src="logo5.png" alt=""></a>
+          </li>
+          <li> <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+            <ion-icon name="chevron-back"></ion-icon> </button> </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+      <h5 id="offcanvasRightLabel">Offcanvas right</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav mx-auto">
+
+        <li class="nav-item">
+          <a class="nav-link display-none-img" href="#"><img src="logo3.png" alt=""></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link display-none-img" href="#"><img src="logo4.jpg" alt=""></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link display-none-img" href="#"><img src="logo5.png" alt=""></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link display-none-img" href="#"><img src="hidden logo.png" alt=""></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- --------------------------------ANOTEHR NAVBAR--------------------------------- -->
+  <!-- ---------------------------COLOURED NAVBAR HTML---------------------- -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link active home mine" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link orange mine" href="#"><i class="fas fa-sync-alt"></i> <br>
+              Pokédex</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link light-orange mine" href="#"> <i class="fas fa-gamepad"></i><br>
+              Games & Apps</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link yellow mine" href="#"> <i class="fas fa-clone"></i><br>
+              Trading Card Game</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link green mine" href="#"> <i class="fas fa-play"></i><br>
+              Animation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link blue mine" href="#"> <i class="fas fa-trophy"></i><br>
+              Play! Pokémon Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link dark-blue mine" href="#"><i class="fas fa-newspaper"></i><br>
+              News</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<!-- -----------------------------MAIN-IMG-BOXXES------------------------------- -->
+
+<div class="container width-controller">
+  <div class="row">
+      <!-- Main Big Image Section -->
+      <div class="col-md-5 big-column ">
+          <div class="big-img pinko">
+              <img src="https://www.pokemon.com/static-assets/content-assets/cms2/img/trading-card-game/_tiles/sv/sv8pt5/preview-cards/sv8pt5-preview-cards-2-169-en.png"
+                  alt="Pokémon Announcement">
+              <h3>Pokémon and Trainers Unite in Scarlet <br>& Violet—Journey Together
+                  <span style="font-size: 18px;">
+                      <br>Forge a bond of friendship to take on all challengers <br>
+                      with Trainer’s Pokémon in the upcoming Pokémon TCG expansion.
+                  </span>
+              </h3>
+          </div>
+
+          <!-- Small Image Row -->
+          <div class="row">
+              <div class="col-md-6 small-img pinko">
+                  <img src="https://www.pokemon.com/static-assets/content-assets/cms2/img/video-games/_tiles/tcg-pocket/2025/01/02/pokemon-tcg-pocket-169-en.png"
+                      alt="Pokémon TCG Pocket">
+                  <h5 style="   background-color: #ee6b2f;">Pokémon and Trainers <br>
+                      Unite in Scarlet & <br>
+                      Violet—Journey Together</h5>
+              </div>
+              <div class="col-md-6 small-img pinko">
+                  <img src="https://www.pokemon.com/static-assets/content-assets/cms2/img/video-games/_tiles/tcg-pocket/2025/01/02/pokemon-tcg-pocket-169-en.png"
+                      alt="Pokémon TCG Pocket">
+                  <h5 style="   background-color:  #313131;">Pokémon and Trainers <br>
+                      Unite in Scarlet & <br>
+                      Violet—Journey Together</h5>
+              </div>
+          </div>
+      </div>
+
+      <!-- Right Column Section -->
+      <div class="col-md-6">
+          <div class="medium-img pinko">
+              <img src="https://www.pokemon.com/static-assets/content-assets/cms2/img/video-games/_tiles/tcg-pocket/2025/01/02/pokemon-tcg-pocket-169-en.png"
+                  alt="Pokémon TCG Pocket">
+              <div class="color-box">
+                  <h5 style="   background-color: #855ac9;">Pokémon and Trainers <br>
+                      Unite in Scarlet & <br>
+                      Violet—Journey Together</h5>
+              </div>
+          </div>
+          <div class="medium-img pinko">
+              <img src="https://www.pokemon.com/static-assets/content-assets/cms2/img/video-games/_tiles/tcg-pocket/2025/01/02/pokemon-tcg-pocket-169-en.png"
+                  alt="Pokémon TCG Pocket">
+              <div class="color-box">
+                  <h5 style="background-color: #30a7d7;">Pokémon and Trainers <br>
+                      Unite in Scarlet & <br>
+                      Violet—Journey Together</h5>
+              </div>
+          </div>
+          <div class="medium-img pinko">
+              <img src="https://www.pokemon.com/static-assets/content-assets/cms2/img/video-games/_tiles/tcg-pocket/2025/01/02/pokemon-tcg-pocket-169-en.png"
+                  alt="Pokémon TCG Pocket">
+              <div class="color-box">
+                  <h5 style="background-color:#e6bc2f;">Pokémon and Trainers <br>
+                      Unite in Scarlet & <br>
+                      Violet—Journey Together</h5>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+ <!-- ----------------------------------CARDS CARTOON ------------------------------  -->
+ <div class="container mt-4">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4">
+      <!-- Card 1 -->
+      <div class="col">
+          <div class="card bg-dark">
+              <img src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/250.png"
+                  class="card-img-top" alt="Ho-Oh">
+              <div class="card-body">
+                  <h5 class="card-title">Ho-Oh</h5>
+                  <p class="card-text"><small class="text-muted">Type: Fire and Flying</small></p>
+              </div>
+          </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="col">
+          <div class="card bg-dark">
+              <img src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/150.png"
+                  class="card-img-top" alt="Mewtwo">
+              <div class="card-body">
+                  <h5 class="card-title">Mewtwo</h5>
+                  <p class="card-text"><small class="text-muted">Type: Psychic</small></p>
+              </div>
+          </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="col">
+          <div class="card bg-dark">
+              <img src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/493.png"
+                  class="card-img-top" alt="Arceus">
+              <div class="card-body">
+                  <h5 class="card-title">Arceus</h5>
+                  <p class="card-text"><small class="text-muted">Type: Normal</small></p>
+              </div>
+          </div>
+      </div>
+      <!-- Card 4 -->
+      <div class="col">
+          <div class="card bg-dark">
+              <img src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/006.png"
+                  class="card-img-top" alt="Charizard">
+              <div class="card-body">
+                  <h5 class="card-title">Charizard</h5>
+                  <p class="card-text"><small class="text-muted">Type: Fire and Flying</small></p>
+              </div>
+          </div>
+      </div>
+      <!-- Card 5 -->
+      <div class="col">
+          <div class="card bg-dark">
+              <img src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/025.png"
+                  class="card-img-top" alt="Pikachu">
+              <div class="card-body">
+                  <h5 class="card-title">Pikachu</h5>
+                  <p class="card-text"><small class="text-muted">Type: Electric</small></p>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+</body>
+
+</html>
